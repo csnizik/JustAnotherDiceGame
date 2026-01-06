@@ -22,7 +22,24 @@ export interface Player {
 }
 
 /**
- * Factory function signature for creating players.
+ * Factory function for creating player instances with dependency injection support.
+ * This function signature enables flexible player creation, allowing different
+ * implementations (human vs AI) to be instantiated through a common interface.
+ *
+ * @param id - Unique identifier for the player
+ * @param name - Display name for the player
+ * @param isHuman - True if the player is controlled by a human, false if AI
+ * @returns A new Player instance with initialized scores (0 for both officialScore and tempScore)
+ *
+ * @example
+ * const createPlayer: CreatePlayerFn = (id, name, isHuman) => ({
+ *   id,
+ *   name,
+ *   isHuman,
+ *   officialScore: 0,
+ *   tempScore: 0
+ * });
+ * const player1 = createPlayer('player1', 'Alice', true);
  */
 export type CreatePlayerFn = (
   id: PlayerId,
