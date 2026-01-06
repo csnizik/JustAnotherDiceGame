@@ -5,7 +5,7 @@ import { type DiceResult } from './IDiceResult';
  * Actions available during a player's turn.
  * Interface segregation: components only depend on actions they use.
  */
-export interface ITurnActions {
+export interface TurnActions {
   /** Initiate a dice roll */
   roll: () => void;
 
@@ -16,7 +16,7 @@ export interface ITurnActions {
 /**
  * Callbacks for dice roll lifecycle.
  */
-export interface IDiceCallbacks {
+export interface DiceCallbacks {
   /** Called when dice start rolling */
   onRollStart?: () => void;
 
