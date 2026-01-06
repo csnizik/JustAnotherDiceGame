@@ -8,7 +8,7 @@ import { type GameState } from './IGameState';
  * Follows Dependency Inversion: game engine depends on this abstraction,
  * not on concrete HumanPlayer or AIPlayer implementations.
  */
-export interface IPlayerService {
+export interface PlayerService {
   /**
    * Determine the player's next action given current game state.
    * For human players, this may involve UI interaction.
